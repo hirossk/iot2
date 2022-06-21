@@ -18,10 +18,10 @@ data = {
 async def main():
     print(json.dumps(data))
     # Fetch the connection string from an environment variable
-    conn_str = os.getenv("IOTHUB_DEVICE_CONNECTION_STRING")
+    conn_str = os.getenv("IOTHUB")
 
     # Create instance of the device client using the connection string
-    device_client = IoTHubDeviceClient.create_from_connection_string(conn_str)
+    device_client = IoTHubDeviceClient.create_from_connection_string(conn_str, websockets=True)
 
     # Connect the device client.
     await device_client.connect()
