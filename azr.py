@@ -6,7 +6,7 @@
 
 import os
 import asyncio
-import json
+import jsonhttps://github.com/hirossk/iot2/blob/main/azure.py
 #これ追加することでi2cから温度を取得できる
 import smbus
 from time import sleep
